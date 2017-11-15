@@ -9,5 +9,6 @@ class Game
         return handler.say(number)
       end
     end
+    return "#{number}"
   end
 end
