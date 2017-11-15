@@ -14,4 +14,9 @@ class GameFizzBuzzTest < Test::Unit::TestCase
     assert_equal 'Fizz', @game.say(3)
     assert_equal 'Fizz', @game.say(6)
   end
+
+  def test_multiples_of_five
+    assert_equal 'Buzz', @game.say(5)
+    assert_equal 'Buzz', @game.say(10)
+  end
 end
