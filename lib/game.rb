@@ -4,11 +4,12 @@ class Game
   end
 
   def say(number)
+    message=''
     @handlers.each do |handler|
       if handler.can_handle?(number)
-        return handler.say(number)
+        message << handler.say(number)
       end
     end
-    return "#{number}"
+    message.empty? ? "#{number}" : message
   end
 end
